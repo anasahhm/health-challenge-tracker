@@ -8,11 +8,12 @@ import { UserListComponent } from './components/user-list/user-list.component';
   declarations: [
     AppComponent,
     AddUserComponent,
-    UserListComponent
+    UserListComponent,
+    // other components
   ],
   imports: [
     BrowserModule,
-    // other imports
+    // other modules
   ],
   providers: [],
   bootstrap: [AppComponent]
