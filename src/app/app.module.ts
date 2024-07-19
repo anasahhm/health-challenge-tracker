@@ -1,26 +1,23 @@
-import { NgModule } from '@angular/core';
+// src/app/app.module.ts
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { AddUserComponent } from './components/add-user/add-user.component';
-import { UserListComponent } from './components/user-list/user-list.component';
-import { PaginationComponent } from './components/pagination/pagination.component';
-import { ChartsComponent } from './components/charts/charts.component';
-import { UserService } from './services/user.service';
-import { NgChartsModule } from 'ng2-charts';
+import { AddUserComponent } from './add-user/add-user.component';
+import { UserListComponent } from './user-list/user-list.component';
+// Other imports
 
 @NgModule({
   declarations: [
     AppComponent,
     AddUserComponent,
     UserListComponent,
-    PaginationComponent,
-    ChartsComponent
+    // Other components
   ],
   imports: [
     BrowserModule,
-    NgChartsModule
+    // Other modules
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
