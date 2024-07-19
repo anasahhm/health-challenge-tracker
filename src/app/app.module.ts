@@ -1,21 +1,18 @@
 // src/app/app.module.ts
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { AddUserComponent } from './add-user/add-user.component';
-import { UserListComponent } from './user-list/user-list.component';
-// Other imports
+import { AppAddUserComponent } from './app-add-user/app-add-user.component';
+import { AppUserListComponent } from './app-user-list/app-user-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddUserComponent,
-    UserListComponent,
-    // Other components
+    AppAddUserComponent,
+    AppUserListComponent
   ],
   imports: [
-    BrowserModule,
-    // Other modules
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
