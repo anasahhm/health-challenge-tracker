@@ -1,0 +1,29 @@
+<div class="add-user-form">
+  <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" type="text">
+      <div *ngIf="addUserForm.get('name')?.invalid && addUserForm.get('name')?.touched">
+        Name is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="age">Age:</label>
+      <input id="age" formControlName="age" type="number">
+      <div *ngIf="addUserForm.get('age')?.invalid && addUserForm.get('age')?.touched">
+        Age is required and must be a positive number.
+      </div>
+    </div>
+
+    <div>
+      <label for="workout">Workout:</label>
+      <input id="workout" formControlName="workout" type="text">
+      <div *ngIf="addUserForm.get('workout')?.invalid && addUserForm.get('workout')?.touched">
+        Workout is required.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="addUserForm.invalid">Add User</button>
+  </form>
+</div>
