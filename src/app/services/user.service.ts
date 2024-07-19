@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User } from './user.model'; // Adjust path as necessary
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class UserService {
   }
 
   private initializeData() {
-    const initialData = [
+    const initialData: User[] = [
       {
         id: 1,
         name: 'John Doe',
@@ -40,11 +41,11 @@ export class UserService {
     localStorage.setItem(this.storageKey, JSON.stringify(initialData));
   }
 
-  getUsers() {
+  getUsers(): User[] {
     return JSON.parse(localStorage.getItem(this.storageKey) || '[]');
   }
 
-  addUser(user: any) {
+  addUser(user: User) {
     const users = this.getUsers();
     users.push(user);
     localStorage.setItem(this.storageKey, JSON.stringify(users));
