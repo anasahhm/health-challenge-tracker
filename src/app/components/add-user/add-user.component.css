@@ -1,0 +1,29 @@
+.add-user-container {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-user-container h2 {
+  margin-bottom: 15px;
+}
+
+.add-user-container label {
+  display: block;
+  margin: 5px 0;
+}
+
+.add-user-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.add-user-container button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
